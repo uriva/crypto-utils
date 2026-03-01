@@ -2,9 +2,11 @@
 
 Bitcoin utilities for Deno/JSR.
 
-- **HD wallet address derivation** — derive native segwit (bc1) addresses from an xpub
+- **HD wallet address derivation** — derive native segwit (bc1) addresses from
+  an xpub
 - **BTC price lookup** — fetch current BTC/USD from CoinGecko
-- **Mempool queries** — fetch transactions and sum received satoshis via mempool.space
+- **Mempool queries** — fetch transactions and sum received satoshis via
+  mempool.space
 
 ## Install
 

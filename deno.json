@@ -1,6 +1,6 @@
 {
   "name": "@uri/crypto-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "exports": "./src/index.ts",
   "imports": {
     "@noble/hashes": "npm:@noble/hashes@2.0.1",

@@ -3,9 +3,14 @@ import { sha256 } from "@noble/hashes/sha2.js";
 import { ripemd160 } from "@noble/hashes/legacy.js";
 import { bech32 } from "@scure/base";
 
-/** Derive a native segwit (bc1, P2WPKH) Bitcoin address from an xpub at derivation path m/0/{index}. */
-export const deriveBtcAddress = (xpub: string, index: number): string => {
-  const child = HDKey.fromExtendedKey(xpub).deriveChild(0).deriveChild(index);
+const zpubVersions = { public: 0x04b24746, private: 0x04b2430c };
+
+/** Derive a native segwit (bc1, P2WPKH) Bitcoin address from an xpub or zpub at derivation path m/0/{index}. */
+export const deriveBtcAddress = (extKey: string, index: number): string => {
+  const child = HDKey.fromExtendedKey(
+    extKey,
+    extKey.startsWith("zpub") ? zpubVersions : undefined,
+  ).deriveChild(0).deriveChild(index);
   const pubkeyHash = ripemd160(sha256(child.publicKey!));
   const words = bech32.toWords(pubkeyHash);
   words.unshift(0);

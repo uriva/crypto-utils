@@ -1,0 +1,12 @@
+{
+  "name": "@uri/crypto-utils",
+  "version": "0.0.1",
+  "exports": "./src/index.ts",
+  "imports": {
+    "@noble/hashes": "npm:@noble/hashes@2.0.1",
+    "@noble/hashes/legacy.js": "npm:@noble/hashes@2.0.1/legacy.js",
+    "@noble/hashes/sha2.js": "npm:@noble/hashes@2.0.1/sha2.js",
+    "@scure/base": "npm:@scure/base@2.0.0",
+    "@scure/bip32": "npm:@scure/bip32@2.0.1"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:@noble/hashes@2.0.1": "2.0.1",
+    "npm:@scure/base@2.0.0": "2.0.0",
+    "npm:@scure/bip32@2.0.1": "2.0.1"
+  },
+  "npm": {
+    "@noble/curves@2.0.1": {
+      "integrity": "sha512-vs1Az2OOTBiP4q0pwjW5aF0xp9n4MxVrmkFBxc6EKZc6ddYx5gaZiAsZoq0uRRXWbi3AT/sBqn05eRPtn1JCPw==",
+      "dependencies": [
+        "@noble/hashes"
+      ]
+    },
+    "@noble/hashes@2.0.1": {
+      "integrity": "sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw=="
+    },
+    "@scure/base@2.0.0": {
+      "integrity": "sha512-3E1kpuZginKkek01ovG8krQ0Z44E3DHPjc5S2rjJw9lZn3KSQOs8S7wqikF/AH7iRanHypj85uGyxk0XAyC37w=="
+    },
+    "@scure/bip32@2.0.1": {
+      "integrity": "sha512-4Md1NI5BzoVP+bhyJaY3K6yMesEFzNS1sE/cP+9nuvE7p/b0kx9XbpDHHFl8dHtufcbdHRUUQdRqLIPHN/s7yA==",
+      "dependencies": [
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:@noble/hashes@2.0.1",
+      "npm:@scure/base@2.0.0",
+      "npm:@scure/bip32@2.0.1"
+    ]
+  }
+}
